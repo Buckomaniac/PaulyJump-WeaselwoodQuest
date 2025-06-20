@@ -1,15 +1,15 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// Fill the canvas black (optional, it's already black by default)
 ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-// Draw a green box — test object
-ctx.fillStyle = 'lime';
-ctx.fillRect(50, 50, 100, 100);
+const pauly = new Image();
+pauly.src = 'assets/images/IMG_1566.png';
 
-// Add a quick text label
-ctx.fillStyle = 'white';
-ctx.font = '20px Arial';
-ctx.fillText('Weaselwood Test', 60, 180);
+let paulyX = 50;
+let paulyY = 50;
+
+pauly.onload = function() {
+  ctx.drawImage(pauly, paulyX, paulyY);
+};
